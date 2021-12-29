@@ -12,3 +12,7 @@
 # 記事の作成
 
 `npx zenn new:article`
+
+# バージョンアップ
+
+`npm install zenn-cli@latest`
