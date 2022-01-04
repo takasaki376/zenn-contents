@@ -388,18 +388,18 @@ $$
   V(X) = \sigma^2
 $$
 
-# 統計的推定
+<!--# 統計的推定-->
 
-## 参考
+<!--## 参考-->
 
-[ベイズ推定と最尤推定の違いを例題を用いて解説](https://ai-trend.jp/basic-study/bayes/maximum-likelihood-estimation-bayes-estimator/)
-[ベイズ統計学とは？初心者向けのやさしい解説](https://ai-trend.jp/basic-study/basic/bayesian-statistics/)
-[最尤推定量とは？初めての人にもわかる解説](https://ai-trend.jp/basic-study/estimator/maximum-likelihood-estimation/)
+<!--[ベイズ推定と最尤推定の違いを例題を用いて解説](https://ai-trend.jp/basic-study/bayes/maximum-likelihood-estimation-bayes-estimator/)-->
+<!--[ベイズ統計学とは？初心者向けのやさしい解説](https://ai-trend.jp/basic-study/basic/bayesian-statistics/)-->
+<!--[最尤推定量とは？初めての人にもわかる解説](https://ai-trend.jp/basic-study/estimator/maximum-likelihood-estimation/)-->
 
-## 一致推定量
+<!--## 一致推定量-->
 
-## 不偏推定量
+<!--## 不偏推定量-->
 
-## 最尤推定
+<!--## 最尤推定-->
 
-## ベイズ推定
+<!--## ベイズ推定-->
