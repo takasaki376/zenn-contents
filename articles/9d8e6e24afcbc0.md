@@ -388,18 +388,82 @@ $$
   V(X) = \sigma^2
 $$
 
-<!--# 統計的推定-->
+# 統計的推定
 
-<!--## 参考-->
+## 参考
 
-<!--[ベイズ推定と最尤推定の違いを例題を用いて解説](https://ai-trend.jp/basic-study/bayes/maximum-likelihood-estimation-bayes-estimator/)-->
+[最尤推定量とは？初めての人にもわかる解説](https://ai-trend.jp/basic-study/estimator/maximum-likelihood-estimation/)
+
 <!--[ベイズ統計学とは？初心者向けのやさしい解説](https://ai-trend.jp/basic-study/basic/bayesian-statistics/)-->
-<!--[最尤推定量とは？初めての人にもわかる解説](https://ai-trend.jp/basic-study/estimator/maximum-likelihood-estimation/)-->
+<!--[ベイズ推定と最尤推定の違いを例題を用いて解説](https://ai-trend.jp/basic-study/bayes/maximum-likelihood-estimation-bayes-estimator/)-->
 
 <!--## 一致推定量-->
 
 <!--## 不偏推定量-->
 
-<!--## 最尤推定-->
+## 最尤推定
+
+- パラメータ$\theta$に従う分布の密度関数を $f(x;\theta)$ とする。尤度関数を $L(\theta;x)=f(x;\theta)$ とすると、$L(\theta;x)$を最大にするような推定量 $\theta=\hat{\theta}$ を $\theta$ の最尤推定量という。
+- 密度関数 $f(x;\theta)$ は、$\theta$を固定した上で$x$の関数である。
+- 尤度関数 $L(\theta;x)$ は、$x$を固定した上で$\theta$の関数である。
+
+### 二項分布の場合の最尤推定量の導出
+
+- コインを$n$回投げて、表が$x$回出た時の最尤推定
+- 二項分布の密度関数
+
+$$
+  f(x;\theta)={}_nC_x\theta^x(1−\theta)^{n−x}
+$$
+
+- 二項分布の場合の尤度関数
+- この関数が最大となる$\theta$を求める事が最尤推定量を求めることになる。
+
+$$
+  L(\theta;x)={}_nC_x\theta^x(1−\theta)^{n−x}
+$$
+
+- 尤度関数を微分すると最大値を求める事ができますが、計算が面倒なので対数尤度関数を微分します。
+- 対数尤度関数
+
+$$
+\begin{aligned}
+  l(\theta) &= logL(\theta;x) \\[10px]
+  &= log \left[ {}_nC_x\theta^x(1−\theta)^{n−x} \right] \\[10px]
+  &= log \left[ \frac{n!}{x!(n-x)!} \theta^x(1−\theta)^{n−x} \right] \\[10px]
+  &= log(n!) - log(x!) - log(n-x)! + xlog\theta + (n-x)log(1-\theta)
+\end{aligned}
+$$
+
+- これを微分する。
+
+$$
+\begin{aligned}
+  \frac{d}{d\theta} l(\theta) &=  \frac{x}{\theta} + \frac{n-x}{1-\theta} \\[10px]
+  &= \frac{x(1-\theta)-(n-x)\theta}{\theta(1-\theta)} \\[10px]
+  &= \frac{x-x\theta-n\theta+x\theta}{\theta(1-\theta)} \\[10px]
+  &= \frac{x-n\theta}{\theta(1-\theta)}
+\end{aligned}
+$$
+
+- これが０になる時が最大となるため
+
+$$
+\begin{aligned}
+  \frac{x-n\theta}{\theta(1-\theta)} &= 0 \\[10px]
+  x-n\theta &= 0 \\[10px]
+  x &= n\theta \\[10px]
+  \theta &= \frac{x}{n}
+\end{aligned}
+$$
+
+- コインを１０回（$n$）投げた時に、表が８回（$x$）投げた時の最尤推定量は、
+
+$$
+\begin{aligned}
+  \theta &= \frac{8}{10} \\[10px]
+  &= \frac{4}{5}
+\end{aligned}
+$$
 
 <!--## ベイズ推定-->
