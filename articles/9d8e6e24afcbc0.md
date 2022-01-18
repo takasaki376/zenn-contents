@@ -1,8 +1,8 @@
 ---
-title: "Deep Learning資格試験 応用数学 確率・統計"
-emoji: "😽"
-type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["E資格"]
+title: 'Deep Learning資格試験 応用数学 確率・統計'
+emoji: '😽'
+type: 'tech' # tech: 技術記事 / idea: アイデア
+topics: ['E資格']
 published: true
 ---
 
@@ -406,6 +406,7 @@ $$
 - パラメータ$\theta$に従う分布の密度関数を $f(x;\theta)$ とする。尤度関数を $L(\theta;x)=f(x;\theta)$ とすると、$L(\theta;x)$を最大にするような推定量 $\theta=\hat{\theta}$ を $\theta$ の最尤推定量という。
 - 密度関数 $f(x;\theta)$ は、$\theta$を固定した上で$x$の関数である。
 - 尤度関数 $L(\theta;x)$ は、$x$を固定した上で$\theta$の関数である。
+- 対数尤度関数が最大となる$\theta$が最尤推定量となる。対数尤度関数を$\theta$で偏微分した値が$0$となる点のこと。
 
 ### 二項分布の場合の最尤推定量の導出
 

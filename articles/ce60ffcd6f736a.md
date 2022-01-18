@@ -1,8 +1,8 @@
 ---
-title: "Deep Learning資格試験 深層学習 再帰的ニューラルネットワーク"
-emoji: "🐷"
-type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["E資格"]
+title: 'Deep Learning資格試験 深層学習 再帰的ニューラルネットワーク'
+emoji: '🐷'
+type: 'tech' # tech: 技術記事 / idea: アイデア
+topics: ['E資格']
 published: false
 ---
 
@@ -109,10 +109,19 @@ $$
 
 ## BLEU
 
+機械翻訳の精度を算出する際、英文では$n=1 \sim 4$における、modified n-gram precision の値の対数加重平均と BP を用いる。具体的には以下の式を用いて算出する。
+
+$$
+BLEU = BP \cdot exp \left( \sum_{n=1}^N \frac{1}{N} logP_n \right)
+$$
+
+加重平均でなく、対数加重平均を用いるメリットとして、機械翻訳の妥当性と流暢性を考慮した安定的な評価ができる。
+modified n-gram precision は n について指数的に小さくなる傾向がある。そのため、対数加重平均をとってスコアを平坦化している。n が小さい時のスコアは妥当性、n が大きい時のスコアは流暢性を評価していると考えることができる。
+
 ### Modified precision
 
 全提案訳文の全 n-gram について、$Count$と$Count_{dp}$の合計の比 \
-　 ⇒ 全 n-gram のうち、どれぐらい Ref の中にある？
+　 ⇒ 全 n-gram のうち、どれぐらい参照翻訳の中にある？
 
 $$
 \begin{aligned}
@@ -120,7 +129,9 @@ P_n = \frac{\sum_{C\in E} \sum_{n-gram \in C} Count_{dp}(n-gram)}{\sum \sum Coun
 \end{aligned}
 $$
 
-### Brevity penalty
+### Brevity penalty（BP）
+
+機械翻訳と参照翻訳の長さを考慮する
 
 $$
 \begin{aligned}
