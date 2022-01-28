@@ -1,9 +1,9 @@
 ---
-title: 'Deep Learning資格試験 深層学習 再帰的ニューラルネットワーク'
-emoji: '🐷'
-type: 'tech' # tech: 技術記事 / idea: アイデア
-topics: ['E資格']
-published: false
+title: "Deep Learning資格試験 深層学習 再帰的ニューラルネットワーク"
+emoji: "🐷"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: ["E資格"]
+published: true
 ---
 
 # はじめに
